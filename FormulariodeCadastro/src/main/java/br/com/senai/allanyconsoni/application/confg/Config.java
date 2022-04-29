@@ -9,3 +9,4 @@ import javax.faces.annotation.FacesConfig.Version;
 public class Config {
 
 }
+ 
