@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:jsf="http://xmlns.jcp.org/jsf"
+	lang="pt-br">
+<h:head>
+	<meta http-equi="Content-Type" content="text/html; charset=ISO-8859-1"/>
+	<title>Cadastro de Dados</title>
+</h:head>
+	
+<body>
+	<h:form>
+		<h:panelGrid columns="2">
+			<f:facet name="header">
+				Dados comerciais
+			</f:facet>
+			
+			Nome da Empresa:
+			<h:inputText value = "#{inserir.nome}"></h:inputText>
+			
+			Cargo:
+			<h:inputText value = "#{inserir.email}"></h:inputText>
+			
+			Salário:
+			<h:inputText value = "#{cadastro.dataNasc}"></h:inputText>
+			
+			Rua:
+			<h:inputText value = "#{cadastro.rua}"></h:inputText>
+			
+			Número:
+			<h:inputText value = "#{inserir.nome}"></h:inputText>
+			
+			Complemento:
+			<h:inputText value = "#{inserir.email}"></h:inputText>
+			
+			Bairro:
+			<h:inputText value = "#{cadastro.dataNasc}"></h:inputText>
+			
+			CEP:
+			<h:inputText value = "#{cadastro.rua}"></h:inputText>
+			
+			Cidade:
+			<h:inputText value = "#{cadastro.dataNasc}"></h:inputText>
+			
+			Estado:
+			<h:selectOneMenu value="#{formulario.number}">
+				<f:selectItem itemValue = "1" itemLabel = "Acre (AC)"></f:selectItem>
+				<f:selectItem itemValue = "2" itemLabel = "Alagoas (AL)"></f:selectItem>
+				<f:selectItem itemValue = "3" itemLabel = "Amapá (AP)"></f:selectItem>
+				<f:selectItem itemValue = "4" itemLabel = "Amazonas (AM)"></f:selectItem>
+				<f:selectItem itemValue = "5" itemLabel = "Bahia (BA)"></f:selectItem>
+				<f:selectItem itemValue = "6" itemLabel = "Ceará (CE)"></f:selectItem>
+				<f:selectItem itemValue = "7" itemLabel = "Distrito Federal (DF)"></f:selectItem>
+				<f:selectItem itemValue = "8" itemLabel = "Espírito Santo (ES)"></f:selectItem>
+				<f:selectItem itemValue = "9" itemLabel = "Goiás (GO)"></f:selectItem>
+				<f:selectItem itemValue = "10" itemLabel = "Maranhão (MA)"></f:selectItem>
+				<f:selectItem itemValue = "11" itemLabel = "Mato Grosso (MT)"></f:selectItem>
+				<f:selectItem itemValue = "12" itemLabel = "Mato Grosso do Sul (MS)"></f:selectItem>
+				<f:selectItem itemValue = "13" itemLabel = "Minas Gerais (MG)"></f:selectItem>
+				<f:selectItem itemValue = "14" itemLabel = "Pará (PA)"></f:selectItem>
+				<f:selectItem itemValue = "15" itemLabel = "Paraíba (PB)"></f:selectItem>
+				<f:selectItem itemValue = "16" itemLabel = "Paraná (PR)"></f:selectItem>
+				<f:selectItem itemValue = "17" itemLabel = "Pernambuco (PE)"></f:selectItem>
+				<f:selectItem itemValue = "18" itemLabel = "Piauí (PI)"></f:selectItem>
+				<f:selectItem itemValue = "19" itemLabel = "Rio de Janeiro (RJ)"></f:selectItem>
+				<f:selectItem itemValue = "20" itemLabel = "Rio Grande do Norte (RN)"></f:selectItem>
+				<f:selectItem itemValue = "21" itemLabel = "Rio Grande do Sul (RS)"></f:selectItem>
+				<f:selectItem itemValue = "22" itemLabel = "Rondônia (RO)"></f:selectItem>
+				<f:selectItem itemValue = "23" itemLabel = "Roraima (RR)"></f:selectItem>
+				<f:selectItem itemValue = "24" itemLabel = "Santa Catarina (SC)"></f:selectItem>
+				<f:selectItem itemValue = "25" itemLabel = "São Paulo (SP)"></f:selectItem>
+				<f:selectItem itemValue = "26" itemLabel = "Sergipe (SE)"></f:selectItem>
+				<f:selectItem itemValue = "27" itemLabel = "Tocantins (TO)"></f:selectItem>
+			</h:selectOneMenu>
+			
+			Telefone Comercial:
+			<h:inputText value = "#{cadastro.dddres}"></h:inputText>
+			<h:inputText value = "#{cadastro.telefoneres}"></h:inputText>
+			
+		</h:panelGrid>
+		
+		<h:commandButton value = "<<Anterior" action="inserir" ></h:commandButton>
+		<h:commandButton value = "Próximo>>" action="#{areas.gerar}" ></h:commandButton>
+	</h:form>
+</body>	
+	
+</html>
