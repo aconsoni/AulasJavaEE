@@ -7,7 +7,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.model.ListDataModel;
 import javax.inject.Named;
 import br.com.senai.allanyconsoni.model.Despesas;
-@SuppressWarnings("serial") 
+@SuppressWarnings("serial") //tira o aviso de cuidado do Eclipse
 @SessionScoped
 @Named("tabela")
 
