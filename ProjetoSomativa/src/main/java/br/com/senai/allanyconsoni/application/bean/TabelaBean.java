@@ -38,7 +38,7 @@ public class TabelaBean implements Serializable {
 	
 	@PostConstruct
 	public void init() {
-		produtos = ProdutoBean.listar();
+		produtos = produtobean.listar();
 	}
 			
 	public String getData() {
