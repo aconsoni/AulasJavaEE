@@ -1,5 +1,7 @@
 package br.com.senai.allanyconsoni.application;
 
+
+//IMPORTAÇÕES
 import java.io.Serializable;
 
 import javax.enterprise.context.RequestScoped;
@@ -11,16 +13,17 @@ import javax.inject.Named;
 @RequestScoped
 
 public class PageBean implements Serializable {
-	private String nome;
+	private String nome; //VARIAVEL
 	
-	@Inject
+	@Inject //INJETA CÓDIGO
 	private Flash flash;
 	
-	public String processar() {
+	public String processar() { //PROCESSA A INFORMAÇÃO RECEBIDA
 		flash.put("nomeDoUsuario", nome);
-		return "Result?faces-redirect=true";
+		return "Result?faces-redirect=true"; //REDIRECIONA PARA OUTRA PÁGINA
 	}
-
+	
+	//GET'S E SET'S
 	public String getNome() {
 		return nome;
 	}

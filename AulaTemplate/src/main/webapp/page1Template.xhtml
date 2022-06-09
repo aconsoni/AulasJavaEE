@@ -13,9 +13,8 @@
 <ui:param name="Titulo" value="Lista de Despesas" />
 <ui:define name="conteudo">
 
-
-
 <script>
+		<!-- MENSAGENS QUE APARECE AO USUÁRIO CASO ELE NÃO INSIRA UMA INFOMAÇÃO PARA PREENCHERA A TABELA -->
 		function verificarCampos(){
 			var data = document.getElementById("f:data").value;
 			var descricao = document.getElementById("f:descricao").value;
@@ -34,41 +33,39 @@
 					alert("Valor não prencida ");
 					return false;}
 					
-					
 				}
 				}
-			
 			
 			return true;
 		}	
 	</script>
 <body>
 
-<h:outputStylesheet library = "css" name = "styles.css" /> 
+<h:outputStylesheet library = "css" name = "styles.css" />  <!-- CHAMA CSS -->
 	<h:form id="f">
 	
 	<h:panelGroup value="" >
 	<h:panelGrid>
 	
 	<h:column>
-	<h:outputText value="Data da Despesas"></h:outputText>
+	<h:outputText value="Data da Despesas"></h:outputText> 
 	<br/>
-	<h:inputText value="#{tabela.data1}" id="data"></h:inputText>
+	<h:inputText value="#{tabela.data1}" id="data"></h:inputText> <!-- ESPAÇO PARA O USUÁRIO INSERIR DATA DA DESPESA  -->
 	</h:column>
 	
 	<h:column>
-	<h:outputText value="Descrição da despesa"></h:outputText>
+	<h:outputText value="Descrição da despesa"></h:outputText> 
 	<br/>
-	<h:inputText value="#{tabela.desc1}" id="descricao"></h:inputText>
+	<h:inputText value="#{tabela.desc1}" id="descricao"></h:inputText> <!-- ESPAÇO PARA O USUÁRIO INSERIR DESCRIÇÃO DA DESPESA  -->
 	</h:column>
 	
 	<h:column>
-	<h:outputText value="Valor da Despesa"></h:outputText>
+	<h:outputText value="Valor da Despesa"></h:outputText> 
 	<br/>
-	<h:inputText value="#{tabela.valor1}" id="valor"></h:inputText>
+	<h:inputText value="#{tabela.valor1}" id="valor"></h:inputText> <!-- ESPAÇO PARA O USUÁRIO INSERIR VALOR DA DESPESA  -->
 	</h:column>
 	
-	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.data1,tabela.desc1,tabela.valor1)}" onclick="return verificarCampos()"></h:commandButton>
+	<h:commandButton value="Inserir" action="#{tabela.inserir(tabela.data1,tabela.desc1,tabela.valor1)}" onclick="return verificarCampos()"></h:commandButton> <!-- BOTÃO PARA INSERIR INFORMAÇÕES NA TABELA -->
 	</h:panelGrid>
 	</h:panelGroup>
 	
@@ -76,25 +73,25 @@
 		<table>
 			
 			<tr>
-			<th class="cabecalho" colspan="5" >
-			Lista de Despesas
+			<th class="cabecalho" colspan="5" > <!-- CABEÇALHO -->
+			Lista de Despesas <!-- TÍTULO DA TABELA -->
 			</th>
 			</tr>
 			
 			
 			<tr>
 			
-			<th class="cabecalho">Despesa</th>
-			<th class="cabecalho">Data</th>
-			<th class="cabecalho">Descricao</th>
-			<th class="cabecalho">Valor</th>
-			<th class="cabecalho">Operacao</th>
+			<th class="cabecalho">Despesa</th> <!-- TÍTULO DA COLUNA DE DESPESA -->
+			<th class="cabecalho">Data</th>  <!-- TÍTULO DA COLUNA DE DATA -->
+			<th class="cabecalho">Descricao</th>  <!-- TÍTULO DA COLUNA DE DESCRIÇÃO -->
+			<th class="cabecalho">Valor</th>  <!-- TÍTULO DA COLUNA DE VALOR -->
+			<th class="cabecalho">Operacao</th>  <!-- TÍTULO DA COLUNA DE OPERAÇÃO -->
 						
 			</tr>
-			<ui:repeat value="#{tabela.despesas}" var="d" varStatus="st">
+			<ui:repeat value="#{tabela.despesas}" var="d" varStatus="st"> <!-- TABELA COM TODAS AS INFORMAÇÕES -->
 			
 		<tr>
-				<td class="colNumero" colspan="1">#{st.index +1}</td>
+				<td class="colNumero" colspan="1">#{st.index +1}</td> <!-- ID GERADO AUTOMATICAMENTE PARA A DESPESA -->
 				
 				
 				<td class="colData" colspan="1">

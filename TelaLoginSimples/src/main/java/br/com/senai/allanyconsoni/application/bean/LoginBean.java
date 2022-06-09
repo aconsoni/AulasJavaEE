@@ -32,6 +32,8 @@ public class LoginBean implements Serializable{
 		return null; //SE ESTIVER ERRADO VOLTA A PÁGINA DE LOGIN 
 	}
 
+	
+	//GET'S E SET'S DAS VARIAVEIS
 	public String getNome() {
 		return nome;
 	}

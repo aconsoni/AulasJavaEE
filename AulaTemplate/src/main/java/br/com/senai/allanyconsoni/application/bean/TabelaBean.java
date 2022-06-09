@@ -10,20 +10,20 @@ import javax.inject.Named;
 
 import br.com.senai.allanyconsoni.application.model.Despesas;
 
-@SuppressWarnings("serial") //tira anuncios de advert�ncia
+@SuppressWarnings("serial") //TIRA ANUNCIOS DE ADVERTENCIA
 @Named("tabela")
-@SessionScoped //tempo de vida da p�gina, o "session" mant�m os dados enquanto o navegador estiver aberto
+@SessionScoped //É O TEMPO DE VIDA DA PÁGINA, É TAMBÉM O QUE MANTÉM OS DADOS ENQUANTO O NAVEGADOR ESTIVER ABERTO
 
 public class TabelaBean implements Serializable{
 	
-	private List<Despesas> despesas = new ArrayList<>();
-	//lista que trabalha com o jsf
+	private List<Despesas> despesas = new ArrayList<>();//LISTA QUE VAI TRABALHA COM O JSF
+	//VARIAVEIS
 	String data1;
 	String desc1;
 	Double Valor1;
 	Boolean a = false; 
 	
-	
+	//GET'S E SET'S
 	public String getData1() {
 		return data1;
 	}
@@ -47,14 +47,10 @@ public class TabelaBean implements Serializable{
 	public void setValor1(Double valor1) {
 		Valor1 = valor1;
 	}
-
 	
-	
-	
-	
-	public String inserir(String data,String desc,Double Valor) {
+	public String inserir(String data,String desc,Double Valor) { //METODO QUE INSERI INFORMAÇÃO
 		
-		Despesas d = new Despesas(data,desc,Valor); //inst�ncia da listdatamodel
+		Despesas d = new Despesas(data,desc,Valor); //INTANCIA DA LISTADATAMODEL
 		d.setEdit(true);
 		a =true;
 		despesas.add(d);
@@ -65,29 +61,26 @@ public class TabelaBean implements Serializable{
 		
 	}
 	
-	public String excluir(Despesas despesa) {
-		
-		despesas.remove(despesa);
-		
+	public String excluir(Despesas despesa) { //METODO QUE EXCLUI INFORMAÇÃO
+		despesas.remove(despesa);	
 		return null;
 	}
 	
-	public String editar(Despesas despesa) {
+	public String editar(Despesas despesa) { //METODO QUE EDITA INFORMAÇÃO
 		despesa.setEdit(true); 
-		
 		return null;
 	}
 	
-	public String gravar (Despesas despesa) {
+	public String gravar (Despesas despesa) { //METODO QUE GRAVA INFORMAÇÃO
 		despesa.setEdit(false);
-		
 		return null;
 	}
 	
-	public List<Despesas> getDespesas() {
+	public List<Despesas> getDespesas() { //RETORNA A LISTA DE DESPESAS
 		return despesas;
 	}
 
+	//GET' E SET'S
 	public Boolean getA() {
 		return a;
 	}

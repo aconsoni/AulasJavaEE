@@ -6,19 +6,19 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	xmlns:jsf="http://xmlns.jcp.org/jsf"
 	lang="pt-br">
-	<link href="css/bootstrap.css" rel="stylesheet"/>
+	<link href="css/bootstrap.css" rel="stylesheet"/> <!-- CHAMA O CSS -->
 	
 <h:head>
 	<meta http-equi="Content=Type" content="text/html; charset=ISO-8859-1"/>
-	<title> Login </title>
+	<title> Login </title> <!-- TÍTULO "DO" SITE (SUCESSO) -->
 </h:head>
 <body>
 	<h:form>
 		<h:panelGrid collumns="2">
-			Nome:
-			<h:inputText value="#{login.nome}"></h:inputText>
-			Senha:
-			<h:inputSecret value="#{login.senha}"></h:inputSecret>
+			Nome: <!-- COLUNA NOME -->
+			<h:inputText value="#{login.nome}"></h:inputText> <!-- INSERÇÃO DE NOME DO USUÁRIO -->
+			Senha: <!-- COLUNA SENHA -->
+			<h:inputSecret value="#{login.senha}"></h:inputSecret> <!-- INSERÇÃO DE SENHA DO USUÁRIO -->
 		</h:panelGrid>
 		<h:commandButton id="login" value="Login" action="#{login.doLogin}"></h:commandButton>
 	</h:form>

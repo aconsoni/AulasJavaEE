@@ -5,7 +5,8 @@ import javax.faces.annotation.FacesConfig;
 import javax.faces.annotation.FacesConfig.Version;
 
 @FacesConfig(version = Version.JSF_2_3)
-@ApplicationScoped //QUANDO A APLICAÇÃO CARREGAR, ELE JÁ VAI ESTAR NA RIP CARREGADO E INSTANCIADO
+@ApplicationScoped
 public class Config {
 
 }
+ 
