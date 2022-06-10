@@ -11,19 +11,20 @@ import javax.inject.Named;
 
 import br.com.senai.DennisSouza.application.model.Despesas;
 
-@SuppressWarnings("serial") //tira anuncios de advertência
+@SuppressWarnings("serial") //TIRA OS ANUNCIOS DE ADVERTENCIAS
 @Named("tabela")
-@SessionScoped //tempo de vida da página, o "session" mantém os dados enquanto o navegador estiver aberto
+@SessionScoped //MANTEM OS DADOS ENQUANTO O NAVEGADOR ESTIVER ABERTO (TEMPO DE VIDA) 
 public class TabelaBean implements Serializable{
 	
 	private List<Despesas> despesas = new ArrayList<>();
-	//lista que trabalha com o jsf
+	//LISTA QUE VAI TRABALHAR COM JSF
 	String data1;
 	String desc1;
 	Double Valor1;
 	Boolean a = false; 
 	
 	
+	//GET'S E SET'S
 	public String getData1() {
 		return data1;
 	}
@@ -52,9 +53,9 @@ public class TabelaBean implements Serializable{
 	
 	
 	
-	public String inserir(String data,String desc,Double Valor) {
+	public String inserir(String data,String desc,Double Valor) { //METODO QUE VAI INSERIR DADOS NA LISTA
 		
-		Despesas d = new Despesas(data,desc,Valor); //instância da listdatamodel
+		Despesas d = new Despesas(data,desc,Valor); //instÃ¢ncia da listdatamodel
 		d.setEdit(true);
 		a =true;
 		despesas.add(d);
