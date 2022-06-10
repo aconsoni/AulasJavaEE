@@ -1,7 +1,7 @@
 package br.com.senai.DennisSouza.application.model;
 
 public class Despesas {
-//atributos primitivos não podem ser nulos, por isso usamos os wrappers
+//VARIAVEIS
 private String data;
 private String descricao;
 private Double valor;
@@ -12,21 +12,21 @@ public String getData() {
 }
 
 
-public Despesas(String data, String descricao, Double valor) {
+public Despesas(String data, String descricao, Double valor) { //CONSTRUTOR
 	super();
 	this.data = data;
 	this.descricao = descricao;
 	this.valor = valor;
 }
 
-public Despesas() {
+public Despesas() { //CONSTRUTOR
 	super();
 	this.data = data;
 	this.descricao = descricao;
 	this.valor = valor;
 }
 
-
+//GET'S E SET'S
 public void setData(String data) {
 	this.data = data;
 }
